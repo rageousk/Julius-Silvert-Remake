@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "p-001",
+    "sku": "JS-MP-001",
+    "name": "Prime Ribeye Steak",
+    "price": 189.5,
+    "category": "Meat & Poultry",
+    "subcategory": "Beef",
+    "unitSize": "Case of 10",
+    "imageUrl": "https://images.unsplash.com/photo-1753440343939-13984b0e9aa7?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-002",
+    "sku": "JS-MP-002",
+    "name": "USDA Choice Striploin",
+    "price": 172.25,
+    "category": "Meat & Poultry",
+    "subcategory": "Beef",
+    "unitSize": "Case of 8",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-003",
+    "sku": "JS-MP-003",
+    "name": "Boneless Chicken Breast",
+    "price": 79.95,
+    "category": "Meat & Poultry",
+    "subcategory": "Chicken",
+    "unitSize": "40 lb case",
+    "imageUrl": "https://images.unsplash.com/photo-1682991136736-a2b44623eeba?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-004",
+    "sku": "JS-MP-004",
+    "name": "Air-Chilled Chicken Thigh",
+    "price": 68.4,
+    "category": "Meat & Poultry",
+    "subcategory": "Chicken",
+    "unitSize": "40 lb case",
+    "imageUrl": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-005",
+    "sku": "JS-MP-005",
+    "name": "Ground Beef 80/20",
+    "price": 112.75,
+    "category": "Meat & Poultry",
+    "subcategory": "Burgers & Grinds",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1764620931673-ba46205f2e4e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-006",
+    "sku": "JS-MP-006",
+    "name": "Dry-Aged Tomahawk",
+    "price": 246.8,
+    "category": "Meat & Poultry",
+    "subcategory": "Beef",
+    "unitSize": "Case of 6",
+    "imageUrl": "https://images.unsplash.com/photo-1546010361-3b7b468209e3?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-007",
+    "sku": "JS-MP-007",
+    "name": "Veal Cutlet",
+    "price": 158.3,
+    "category": "Meat & Poultry",
+    "subcategory": "Beef",
+    "unitSize": "Case of 24",
+    "imageUrl": "https://images.unsplash.com/photo-1648141294089-ccf942b889ca?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-008",
+    "sku": "JS-MP-008",
+    "name": "Lamb Rack Frenched",
+    "price": 214.6,
+    "category": "Meat & Poultry",
+    "subcategory": "Lamb",
+    "unitSize": "Case of 8",
+    "imageUrl": "https://images.unsplash.com/photo-1607599355943-640ad627fa0b?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-009",
+    "sku": "JS-MP-009",
+    "name": "Duck Breast Magret",
+    "price": 141.2,
+    "category": "Meat & Poultry",
+    "subcategory": "Chicken",
+    "unitSize": "Case of 20",
+    "imageUrl": "https://images.unsplash.com/photo-1617954096142-d712bc1dad61?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-010",
+    "sku": "JS-MP-010",
+    "name": "Pork Belly Skin-On",
+    "price": 96.9,
+    "category": "Meat & Poultry",
+    "subcategory": "Pork",
+    "unitSize": "Case of 2 slabs",
+    "imageUrl": "https://images.unsplash.com/photo-1759670338079-8633e15653f2?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-011",
+    "sku": "JS-DE-001",
+    "name": "European Butter Unsalted",
+    "price": 86.4,
+    "category": "Dairy & Eggs",
+    "subcategory": "Butter",
+    "unitSize": "Case of 36 x 8 oz",
+    "imageUrl": "https://images.unsplash.com/photo-1645802734040-26f0265830c7?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-012",
+    "sku": "JS-DE-002",
+    "name": "Heavy Cream 40%",
+    "price": 57.8,
+    "category": "Dairy & Eggs",
+    "subcategory": "Milk & Cream",
+    "unitSize": "Case of 12 x 1 qt",
+    "imageUrl": "https://images.unsplash.com/photo-1581868164904-77b124b80242?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-013",
+    "sku": "JS-DE-003",
+    "name": "Whole Milk",
+    "price": 39.75,
+    "category": "Dairy & Eggs",
+    "subcategory": "Milk & Cream",
+    "unitSize": "Case of 4 x 1 gal",
+    "imageUrl": "https://images.unsplash.com/photo-1635436338433-89747d0ca0ef?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-014",
+    "sku": "JS-DE-004",
+    "name": "Creme Fraiche",
+    "price": 62.2,
+    "category": "Dairy & Eggs",
+    "subcategory": "Milk & Cream",
+    "unitSize": "Case of 6 x 16 oz",
+    "imageUrl": "https://images.unsplash.com/photo-1768850418252-37af725e46bb?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-015",
+    "sku": "JS-DE-005",
+    "name": "Greek Yogurt Plain",
+    "price": 49.9,
+    "category": "Dairy & Eggs",
+    "subcategory": "Yogurt & Sour Cream",
+    "unitSize": "5 lb tub",
+    "imageUrl": "https://images.unsplash.com/photo-1771748649027-a84e8e3c5fd9?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-016",
+    "sku": "JS-DE-006",
+    "name": "Cultured Sour Cream",
+    "price": 45.1,
+    "category": "Dairy & Eggs",
+    "subcategory": "Yogurt & Sour Cream",
+    "unitSize": "Case of 6 x 2 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1760273464017-4bb7dfa42d91?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-017",
+    "sku": "JS-DE-007",
+    "name": "Free-Range Brown Eggs",
+    "price": 74,
+    "category": "Dairy & Eggs",
+    "subcategory": "Eggs",
+    "unitSize": "Case of 15 dozen",
+    "imageUrl": "https://images.unsplash.com/photo-1773332585749-5146862ba746?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-018",
+    "sku": "JS-DE-008",
+    "name": "Liquid Egg Whites",
+    "price": 58.95,
+    "category": "Dairy & Eggs",
+    "subcategory": "Eggs",
+    "unitSize": "Case of 12 x 1 qt",
+    "imageUrl": "https://images.unsplash.com/photo-1712056407271-e51fdc896637?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-019",
+    "sku": "JS-DE-009",
+    "name": "Buttermilk",
+    "price": 36.6,
+    "category": "Dairy & Eggs",
+    "subcategory": "Milk & Cream",
+    "unitSize": "Case of 4 x 1 gal",
+    "imageUrl": "https://images.unsplash.com/photo-1745256698394-867c94a3a0b4?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-020",
+    "sku": "JS-DE-010",
+    "name": "Mascarpone",
+    "price": 81.5,
+    "category": "Dairy & Eggs",
+    "subcategory": "Milk & Cream",
+    "unitSize": "Case of 6 x 1 kg",
+    "imageUrl": "https://images.unsplash.com/photo-1627935722051-395636b0d8a5?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-021",
+    "sku": "JS-CC-001",
+    "name": "Parmigiano Reggiano 24M",
+    "price": 219.3,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Italian Style",
+    "unitSize": "Whole wheel",
+    "imageUrl": "https://images.unsplash.com/photo-1590912710024-6d51a6771abd?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-022",
+    "sku": "JS-CC-002",
+    "name": "Gruyere Reserve",
+    "price": 148.8,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Swiss & Alpine",
+    "unitSize": "Case of 2 wheels",
+    "imageUrl": "https://images.unsplash.com/photo-1706512998255-c2d2dcf2ace9?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-023",
+    "sku": "JS-CC-003",
+    "name": "Aged Cheddar White",
+    "price": 104.25,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Cheddars & Jacks",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1519411792752-25c2468cccb3?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-024",
+    "sku": "JS-CC-004",
+    "name": "Fresh Mozzarella Log",
+    "price": 66.4,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Italian Style",
+    "unitSize": "Case of 6 x 2 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1688381691547-36831dd5f435?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-025",
+    "sku": "JS-CC-005",
+    "name": "Goat Cheese Chevre",
+    "price": 72.9,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Goat",
+    "unitSize": "Case of 12 x 10 oz",
+    "imageUrl": "https://images.unsplash.com/photo-1579445767201-7a5b4e0070a9?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-026",
+    "sku": "JS-CC-006",
+    "name": "Prosciutto di Parma",
+    "price": 198.6,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Deli Style",
+    "unitSize": "Whole leg",
+    "imageUrl": "https://images.unsplash.com/photo-1767500539097-d913d9aa731b?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-027",
+    "sku": "JS-CC-007",
+    "name": "Soppressata Piccante",
+    "price": 119.4,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Deli Style",
+    "unitSize": "Case of 16",
+    "imageUrl": "https://images.unsplash.com/photo-1764436988814-4eff7322ee9c?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-028",
+    "sku": "JS-CC-008",
+    "name": "Mortadella Pistachio",
+    "price": 93.75,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Deli Style",
+    "unitSize": "Case of 2 chubs",
+    "imageUrl": "https://images.unsplash.com/photo-1771626577210-286aca285737?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-029",
+    "sku": "JS-CC-009",
+    "name": "Burrata 4 oz",
+    "price": 88.1,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Italian Style",
+    "unitSize": "Case of 24",
+    "imageUrl": "https://images.unsplash.com/photo-1632862900366-24c6a79e38f8?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-030",
+    "sku": "JS-CC-010",
+    "name": "Spanish Manchego",
+    "price": 132.6,
+    "category": "Cheese & Charcuterie",
+    "subcategory": "Swiss & Alpine",
+    "unitSize": "Case of 2 wheels",
+    "imageUrl": "https://images.unsplash.com/photo-1646576248496-bd427f77bb17?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-031",
+    "sku": "JS-SU-001",
+    "name": "Compostable To-Go Box",
+    "price": 62.5,
+    "category": "Supplies",
+    "subcategory": "Disposables",
+    "unitSize": "Case of 200",
+    "imageUrl": "https://images.unsplash.com/photo-1767469576701-b05165afd418?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-032",
+    "sku": "JS-SU-002",
+    "name": "Nitrile Gloves Medium",
+    "price": 48.2,
+    "category": "Supplies",
+    "subcategory": "Gloves",
+    "unitSize": "Case of 10 boxes",
+    "imageUrl": "https://images.unsplash.com/photo-1663430218462-8024770c830e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-033",
+    "sku": "JS-SU-003",
+    "name": "Vacuum Pouches 8x10",
+    "price": 41.7,
+    "category": "Supplies",
+    "subcategory": "Containers & Bags",
+    "unitSize": "Case of 1000",
+    "imageUrl": "https://images.unsplash.com/photo-1772285253181-b1257afb3698?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-034",
+    "sku": "JS-SU-004",
+    "name": "Foil Pan Full Size",
+    "price": 54.9,
+    "category": "Supplies",
+    "subcategory": "Kitchen Supplies",
+    "unitSize": "Case of 50",
+    "imageUrl": "https://images.unsplash.com/photo-1612156723470-10f426219f63?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-035",
+    "sku": "JS-SU-005",
+    "name": "Microfiber Kitchen Towels",
+    "price": 29.95,
+    "category": "Supplies",
+    "subcategory": "Napkins & Towels",
+    "unitSize": "Case of 72",
+    "imageUrl": "https://images.unsplash.com/photo-1764158156827-0df193e9783c?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-036",
+    "sku": "JS-SU-006",
+    "name": "Sanitizer Quat Tablets",
+    "price": 33.8,
+    "category": "Supplies",
+    "subcategory": "Cleaning Products",
+    "unitSize": "Jar of 150",
+    "imageUrl": "https://images.unsplash.com/photo-1768716574889-e9af8e7f7ae8?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-037",
+    "sku": "JS-SU-007",
+    "name": "Disposable Piping Bags",
+    "price": 38.6,
+    "category": "Supplies",
+    "subcategory": "Kitchen Supplies",
+    "unitSize": "Box of 100",
+    "imageUrl": "https://images.unsplash.com/photo-1644203542040-2df37e3580ef?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-038",
+    "sku": "JS-SU-008",
+    "name": "Deli Containers 32 oz",
+    "price": 46.4,
+    "category": "Supplies",
+    "subcategory": "Containers & Bags",
+    "unitSize": "Case of 240",
+    "imageUrl": "https://images.unsplash.com/photo-1605940374327-ca3508431b42?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-039",
+    "sku": "JS-SU-009",
+    "name": "Pizza Box 16 in",
+    "price": 52.1,
+    "category": "Supplies",
+    "subcategory": "Containers & Bags",
+    "unitSize": "Bundle of 100",
+    "imageUrl": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-040",
+    "sku": "JS-SU-010",
+    "name": "Sterno Fuel Can",
+    "price": 27.75,
+    "category": "Supplies",
+    "subcategory": "Kitchen Supplies",
+    "unitSize": "Case of 24",
+    "imageUrl": "https://images.unsplash.com/photo-1758346971377-31a61f90a3e7?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-041",
+    "sku": "JS-PA-001",
+    "name": "Arborio Rice",
+    "price": 51.3,
+    "category": "Pantry",
+    "subcategory": "Beans & Legumes",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1619566636858-b78c636a75b4?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-042",
+    "sku": "JS-PA-002",
+    "name": "San Marzano Tomatoes DOP",
+    "price": 63.6,
+    "category": "Pantry",
+    "subcategory": "Condiments",
+    "unitSize": "Case of 6 x 2.5 kg",
+    "imageUrl": "https://images.unsplash.com/photo-1760445529715-24d3245ce80d?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-043",
+    "sku": "JS-PA-003",
+    "name": "Chickpeas",
+    "price": 29.2,
+    "category": "Pantry",
+    "subcategory": "Beans & Legumes",
+    "unitSize": "Case of 12 cans",
+    "imageUrl": "https://images.unsplash.com/photo-1586201376326-cb89e7a087e2?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-044",
+    "sku": "JS-PA-004",
+    "name": "Black Truffle Carpaccio",
+    "price": 184.95,
+    "category": "Pantry",
+    "subcategory": "Truffles",
+    "unitSize": "Case of 12 jars",
+    "imageUrl": "https://images.unsplash.com/photo-1624968665982-84bac2a2821e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-045",
+    "sku": "JS-PA-005",
+    "name": "Dijon Mustard",
+    "price": 34.8,
+    "category": "Pantry",
+    "subcategory": "Condiments",
+    "unitSize": "Case of 6 x 1 L",
+    "imageUrl": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-046",
+    "sku": "JS-PA-006",
+    "name": "Harissa Paste",
+    "price": 39.5,
+    "category": "Pantry",
+    "subcategory": "Condiments",
+    "unitSize": "Case of 12 x 6 oz",
+    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-047",
+    "sku": "JS-PA-007",
+    "name": "Whole Grain Mustard",
+    "price": 33.9,
+    "category": "Pantry",
+    "subcategory": "Condiments",
+    "unitSize": "Case of 6 x 1 L",
+    "imageUrl": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-048",
+    "sku": "JS-PA-008",
+    "name": "Roasted Red Peppers",
+    "price": 47.75,
+    "category": "Pantry",
+    "subcategory": "Condiments",
+    "unitSize": "Case of 12 jars",
+    "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-049",
+    "sku": "JS-PA-009",
+    "name": "Capers Nonpareil",
+    "price": 42.1,
+    "category": "Pantry",
+    "subcategory": "Condiments",
+    "unitSize": "Case of 6 x 32 oz",
+    "imageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-050",
+    "sku": "JS-PA-010",
+    "name": "Carnaroli Rice",
+    "price": 58,
+    "category": "Pantry",
+    "subcategory": "Beans & Legumes",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1609770424775-39ec362f2d94?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-051",
+    "sku": "JS-SF-001",
+    "name": "Atlantic Salmon Fillet",
+    "price": 176.4,
+    "category": "Seafood",
+    "subcategory": "Fish",
+    "unitSize": "Case of 10 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1559058789-672da06263d8?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-052",
+    "sku": "JS-SF-002",
+    "name": "Jumbo Shrimp U10",
+    "price": 198.8,
+    "category": "Seafood",
+    "subcategory": "Shrimp",
+    "unitSize": "5 lb block",
+    "imageUrl": "https://images.unsplash.com/photo-1756364084889-9a8d9ece6112?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-053",
+    "sku": "JS-SF-003",
+    "name": "Dry Scallops U12",
+    "price": 224.5,
+    "category": "Seafood",
+    "subcategory": "Shellfish",
+    "unitSize": "Case of 10 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1770839112008-f6a165687cca?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-054",
+    "sku": "JS-SF-004",
+    "name": "Yellowfin Tuna Loin",
+    "price": 189,
+    "category": "Seafood",
+    "subcategory": "Fish",
+    "unitSize": "Case of 4 loins",
+    "imageUrl": "https://images.unsplash.com/photo-1772155657429-bf1f7d64934b?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-055",
+    "sku": "JS-SF-005",
+    "name": "Mussels PEI",
+    "price": 54.4,
+    "category": "Seafood",
+    "subcategory": "Shellfish",
+    "unitSize": "Case of 10 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1768725845685-b88ca2aa192a?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-056",
+    "sku": "JS-SF-006",
+    "name": "Lobster Tail 5 oz",
+    "price": 267.9,
+    "category": "Seafood",
+    "subcategory": "Shellfish",
+    "unitSize": "Case of 24",
+    "imageUrl": "https://images.unsplash.com/photo-1710508852956-f1eba75d7580?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-057",
+    "sku": "JS-SF-007",
+    "name": "Octopus Tentacles Cooked",
+    "price": 142.6,
+    "category": "Seafood",
+    "subcategory": "Octopus & Calamari",
+    "unitSize": "Case of 11 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1758384075930-6e3835d22b1d?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-058",
+    "sku": "JS-SF-008",
+    "name": "Whole Branzino",
+    "price": 101.95,
+    "category": "Seafood",
+    "subcategory": "Fish",
+    "unitSize": "Case of 12 fish",
+    "imageUrl": "https://images.unsplash.com/photo-1605493624470-1e1b5ba0078e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-059",
+    "sku": "JS-SF-009",
+    "name": "Crab Meat Jumbo Lump",
+    "price": 189.7,
+    "category": "Seafood",
+    "subcategory": "Crab",
+    "unitSize": "Case of 6 x 1 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1739785938237-73b3654200d5?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-060",
+    "sku": "JS-SF-010",
+    "name": "Smoked Salmon Sliced",
+    "price": 92.3,
+    "category": "Seafood",
+    "subcategory": "Fish",
+    "unitSize": "Case of 6 sides",
+    "imageUrl": "https://images.unsplash.com/photo-1739785938093-c2b6befeca2f?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-061",
+    "sku": "JS-FR-001",
+    "name": "French Fries 3/8 Cut",
+    "price": 38.5,
+    "category": "Frozen",
+    "subcategory": "French Fries",
+    "unitSize": "Case of 6 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1684815495679-f6e6bc0634ec?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-062",
+    "sku": "JS-FR-002",
+    "name": "Frozen Wild Blueberries",
+    "price": 44.8,
+    "category": "Frozen",
+    "subcategory": "Frozen Fruit",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-063",
+    "sku": "JS-FR-003",
+    "name": "Puff Pastry Sheets",
+    "price": 49.2,
+    "category": "Frozen",
+    "subcategory": "Frozen Desserts",
+    "unitSize": "Case of 20",
+    "imageUrl": "https://images.unsplash.com/photo-1624174503860-478619028ab3?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-064",
+    "sku": "JS-FR-004",
+    "name": "Edamame Shelled",
+    "price": 57.6,
+    "category": "Frozen",
+    "subcategory": "Frozen Vegetables",
+    "unitSize": "Case of 4 x 6 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1617177447175-7b9640e3966b?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-065",
+    "sku": "JS-FR-005",
+    "name": "Spinach Chopped IQF",
+    "price": 31.9,
+    "category": "Frozen",
+    "subcategory": "Frozen Vegetables",
+    "unitSize": "Case of 12 x 2 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1458917524587-d3236cc8c2c8?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-066",
+    "sku": "JS-FR-006",
+    "name": "Artichoke Hearts IQF",
+    "price": 72.3,
+    "category": "Frozen",
+    "subcategory": "Frozen Vegetables",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1748342319942-223b99937d4e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-067",
+    "sku": "JS-FR-007",
+    "name": "Chocolate Croissant Dough",
+    "price": 64.5,
+    "category": "Frozen",
+    "subcategory": "Frozen Desserts",
+    "unitSize": "Case of 70",
+    "imageUrl": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-068",
+    "sku": "JS-FR-008",
+    "name": "Ravioli Ricotta Spinach",
+    "price": 58.75,
+    "category": "Frozen",
+    "subcategory": "Frozen Pasta",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1564988208597-e5c88b4cd007?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-069",
+    "sku": "JS-FR-009",
+    "name": "Mini Eclair Assorted",
+    "price": 81.6,
+    "category": "Frozen",
+    "subcategory": "Frozen Desserts",
+    "unitSize": "Case of 120",
+    "imageUrl": "https://images.unsplash.com/photo-1717838208427-57ce44a503e2?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-070",
+    "sku": "JS-FR-010",
+    "name": "Frozen Mango Chunks",
+    "price": 37.4,
+    "category": "Frozen",
+    "subcategory": "Frozen Fruit",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1772984613890-e3bfbca7f245?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-071",
+    "sku": "JS-PR-001",
+    "name": "Baby Arugula",
+    "price": 26.9,
+    "category": "Produce",
+    "subcategory": "Leafy Greens",
+    "unitSize": "Case of 4 x 3 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1745256489409-7dc5d3dab8e1?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-072",
+    "sku": "JS-PR-002",
+    "name": "Heirloom Tomato Mix",
+    "price": 44.3,
+    "category": "Produce",
+    "subcategory": "Leafy Greens",
+    "unitSize": "15 lb case",
+    "imageUrl": "https://images.unsplash.com/photo-1631021967261-c57ee4dfa9bb?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-073",
+    "sku": "JS-PR-003",
+    "name": "Fingerling Potatoes",
+    "price": 32.2,
+    "category": "Produce",
+    "subcategory": "Potatoes",
+    "unitSize": "25 lb sack",
+    "imageUrl": "https://images.unsplash.com/photo-1634114042751-527be6421f41?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-074",
+    "sku": "JS-PR-004",
+    "name": "Asparagus Jumbo",
+    "price": 39.7,
+    "category": "Produce",
+    "subcategory": "Leafy Greens",
+    "unitSize": "Case of 11 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1609869882537-6a860e45a0d6?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-075",
+    "sku": "JS-PR-005",
+    "name": "Meyer Lemons",
+    "price": 36.6,
+    "category": "Produce",
+    "subcategory": "Citrus",
+    "unitSize": "Case of 18 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1718196917011-801cddb84334?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-076",
+    "sku": "JS-PR-006",
+    "name": "Avocado Hass #2",
+    "price": 64.9,
+    "category": "Produce",
+    "subcategory": "Leafy Greens",
+    "unitSize": "Case of 48",
+    "imageUrl": "https://images.unsplash.com/photo-1573566291259-fd494a326b60?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-077",
+    "sku": "JS-PR-007",
+    "name": "Rainbow Carrots",
+    "price": 28.4,
+    "category": "Produce",
+    "subcategory": "Leafy Greens",
+    "unitSize": "Case of 24 bunches",
+    "imageUrl": "https://images.unsplash.com/photo-1660255940824-b712b5b03caf?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-078",
+    "sku": "JS-PR-008",
+    "name": "Thai Basil",
+    "price": 22.8,
+    "category": "Produce",
+    "subcategory": "Leafy Greens",
+    "unitSize": "Per Bunch",
+    "imageUrl": "https://images.unsplash.com/photo-1756574747685-257ddaebe519?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-079",
+    "sku": "JS-PR-009",
+    "name": "Shiitake Mushrooms",
+    "price": 51,
+    "category": "Produce",
+    "subcategory": "Mushrooms",
+    "unitSize": "Case of 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1709111573644-867fb9b0d185?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-080",
+    "sku": "JS-PR-010",
+    "name": "Microgreens Mix",
+    "price": 34.95,
+    "category": "Produce",
+    "subcategory": "Leafy Greens",
+    "unitSize": "Case of 8 trays",
+    "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-081",
+    "sku": "JS-BP-001",
+    "name": "Bread Flour High Gluten",
+    "price": 29.9,
+    "category": "Baking & Pastry",
+    "subcategory": "Bread",
+    "unitSize": "50 lb bag",
+    "imageUrl": "https://images.unsplash.com/photo-1760445528355-19c965df8d4d?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-082",
+    "sku": "JS-BP-002",
+    "name": "Pastry Flour",
+    "price": 27.4,
+    "category": "Baking & Pastry",
+    "subcategory": "Dough, Shells & Pastry",
+    "unitSize": "50 lb bag",
+    "imageUrl": "https://images.unsplash.com/photo-1760445528974-e6dedad99336?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-083",
+    "sku": "JS-BP-003",
+    "name": "Almond Flour",
+    "price": 68.6,
+    "category": "Baking & Pastry",
+    "subcategory": "Nuts & Seeds",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1576186726580-a816e8b12896?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-084",
+    "sku": "JS-BP-004",
+    "name": "Baking Powder Double Acting",
+    "price": 31.8,
+    "category": "Baking & Pastry",
+    "subcategory": "Leaveners",
+    "unitSize": "Case of 6 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1591274603033-b63d98dd3b2e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-085",
+    "sku": "JS-BP-005",
+    "name": "Active Dry Yeast",
+    "price": 52.5,
+    "category": "Baking & Pastry",
+    "subcategory": "Leaveners",
+    "unitSize": "Case of 20 x 1 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1772915516557-2d57f94b0bd0?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-086",
+    "sku": "JS-BP-006",
+    "name": "Vanilla Bean Paste",
+    "price": 96.3,
+    "category": "Baking & Pastry",
+    "subcategory": "Baking Fats",
+    "unitSize": "Case of 6 x 16 oz",
+    "imageUrl": "https://images.unsplash.com/photo-1668723969147-ec60e25b250d?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-087",
+    "sku": "JS-BP-007",
+    "name": "Dark Chocolate Feves 64%",
+    "price": 119.9,
+    "category": "Baking & Pastry",
+    "subcategory": "Chocolate",
+    "unitSize": "Case of 4 x 5 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-088",
+    "sku": "JS-BP-008",
+    "name": "Cane Sugar Extra Fine",
+    "price": 25.1,
+    "category": "Baking & Pastry",
+    "subcategory": "Leaveners",
+    "unitSize": "50 lb bag",
+    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-089",
+    "sku": "JS-BP-009",
+    "name": "Cornstarch",
+    "price": 24.6,
+    "category": "Baking & Pastry",
+    "subcategory": "Leaveners",
+    "unitSize": "Case of 6 x 3 lb",
+    "imageUrl": "https://images.unsplash.com/photo-1551185618-07fd482ff86e?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-090",
+    "sku": "JS-BP-010",
+    "name": "Gelatin Sheets Gold",
+    "price": 74.2,
+    "category": "Baking & Pastry",
+    "subcategory": "Baking Fats",
+    "unitSize": "Case of 20 packs",
+    "imageUrl": "https://images.unsplash.com/photo-1638792958866-9b3f787ec709?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-091",
+    "sku": "JS-OV-001",
+    "name": "Extra Virgin Olive Oil",
+    "price": 102.6,
+    "category": "Oils & Vinegars",
+    "subcategory": "Extra Virgin Olive Oils",
+    "unitSize": "Case of 4 x 3 L",
+    "imageUrl": "https://images.unsplash.com/photo-1759749597968-d9f3a5057405?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-092",
+    "sku": "JS-OV-002",
+    "name": "Pomace Olive Oil",
+    "price": 68.8,
+    "category": "Oils & Vinegars",
+    "subcategory": "Frying Oils",
+    "unitSize": "Case of 4 x 3 L",
+    "imageUrl": "https://images.unsplash.com/photo-1758524152053-2d0ff084142d?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-093",
+    "sku": "JS-OV-003",
+    "name": "Avocado Oil",
+    "price": 89.75,
+    "category": "Oils & Vinegars",
+    "subcategory": "Frying Oils",
+    "unitSize": "Case of 6 x 1 L",
+    "imageUrl": "https://images.unsplash.com/photo-1568708297860-2197031e5db6?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-094",
+    "sku": "JS-OV-004",
+    "name": "Grapeseed Oil",
+    "price": 55.2,
+    "category": "Oils & Vinegars",
+    "subcategory": "Frying Oils",
+    "unitSize": "Case of 4 x 1 gal",
+    "imageUrl": "https://images.unsplash.com/photo-1760445528823-fd942d4b459b?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-095",
+    "sku": "JS-OV-005",
+    "name": "Sesame Oil Toasted",
+    "price": 48.6,
+    "category": "Oils & Vinegars",
+    "subcategory": "Frying Oils",
+    "unitSize": "Case of 6 x 500 ml",
+    "imageUrl": "https://images.unsplash.com/photo-1760445529098-949fcfc7c9a9?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-096",
+    "sku": "JS-OV-006",
+    "name": "Balsamic Vinegar IGP",
+    "price": 77.9,
+    "category": "Oils & Vinegars",
+    "subcategory": "Balsamic",
+    "unitSize": "Case of 6 x 750 ml",
+    "imageUrl": "https://images.unsplash.com/photo-1759749597861-e90685f026b4?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-097",
+    "sku": "JS-OV-007",
+    "name": "Red Wine Vinegar",
+    "price": 36.4,
+    "category": "Oils & Vinegars",
+    "subcategory": "Wine Vinegars",
+    "unitSize": "Case of 12 x 1 L",
+    "imageUrl": "https://images.unsplash.com/photo-1760445530321-e6875af0b415?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-098",
+    "sku": "JS-OV-008",
+    "name": "Sherry Vinegar Reserva",
+    "price": 64,
+    "category": "Oils & Vinegars",
+    "subcategory": "Wine Vinegars",
+    "unitSize": "Case of 6 x 750 ml",
+    "imageUrl": "https://images.unsplash.com/photo-1759749597905-e2fed85d8cd5?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-099",
+    "sku": "JS-OV-009",
+    "name": "Rice Vinegar",
+    "price": 29.8,
+    "category": "Oils & Vinegars",
+    "subcategory": "Rice Vinegar",
+    "unitSize": "Case of 12 x 24 oz",
+    "imageUrl": "https://images.unsplash.com/photo-1579113800032-c38bd7635818?auto=format&fit=crop&w=600&h=400&q=80"
+  },
+  {
+    "id": "p-100",
+    "sku": "JS-OV-010",
+    "name": "White Truffle Oil",
+    "price": 109.5,
+    "category": "Oils & Vinegars",
+    "subcategory": "Extra Virgin Olive Oils",
+    "unitSize": "Case of 12 x 250 ml",
+    "imageUrl": "https://images.unsplash.com/photo-1759749597823-3673f3325e8d?auto=format&fit=crop&w=600&h=400&q=80"
+  }
+]
