@@ -303,7 +303,7 @@ export default function LoginClient() {
                   {siError && <p className="login-err-msg">{siError}</p>}
 
                   <button className="login-cta-btn" type="submit" disabled={siLoading}>
-                    {siLoading ? <span className="login-spinner" /> : "SIGN IN"}
+                    {siLoading ? <span className="login-spinner" /> : "Sign in"}
                   </button>
                   <p className="login-cred-hint">
                     First time signing in with email? Use{" "}
@@ -470,7 +470,7 @@ export default function LoginClient() {
                       {suError && <p className="login-err-msg">{suError}</p>}
 
                       <button className="login-cta-btn" type="submit" disabled={suLoading}>
-                        {suLoading ? <span className="login-spinner" /> : "SUBMIT"}
+                        {suLoading ? <span className="login-spinner" /> : "Submit application"}
                       </button>
                     </form>
 

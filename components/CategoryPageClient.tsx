@@ -97,7 +97,8 @@ export default function CategoryPageClient({
     return result;
   }, [products, activeSubcategory, sortBy, brandFilter]);
 
-  const hasFilters = !!activeSubcategory || brandFilter.size > 0;
+  /** Brand-only: subcategory is page context (breadcrumb + title), not a second “filter” chip */
+  const hasBrandFilters = brandFilter.size > 0;
 
   // ── Render ────────────────────────────────────────────────
   return (
@@ -202,24 +203,19 @@ export default function CategoryPageClient({
         {/* Toolbar */}
         <div className="cat-toolbar">
           <div className="cat-filter-chips">
-            {activeSubcategory && (
-              <span className="cat-chip">
-                {activeSubcategory}
-                <button className="cat-chip-remove" onClick={() => goToSub(null)}>×</button>
-              </span>
-            )}
             {Array.from(brandFilter).map((b) => (
               <span key={b} className="cat-chip">
                 {b}
-                <button className="cat-chip-remove" onClick={() => toggleBrand(b)}>×</button>
+                <button type="button" className="cat-chip-remove" onClick={() => toggleBrand(b)}>×</button>
               </span>
             ))}
-            {hasFilters && (
+            {hasBrandFilters && (
               <button
+                type="button"
                 className="cat-clear-all"
-                onClick={() => { goToSub(null); setBrandFilter(new Set()); }}
+                onClick={() => setBrandFilter(new Set())}
               >
-                Clear All
+                Clear all
               </button>
             )}
           </div>

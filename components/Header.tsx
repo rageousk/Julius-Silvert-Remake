@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useCartStore } from "@/store/useCartStore";
 import { useSession, signOut } from "next-auth/react";
 import { getDisplayName } from "@/lib/userProfile";
@@ -11,11 +12,16 @@ import { MiniCart } from "@/components/MiniCart";
 import { HelpRequestPanel } from "@/components/HelpRequestPanel";
 
 export function Header() {
+  const [portalReady, setPortalReady] = useState(false);
+  const [compactHeaderSearch, setCompactHeaderSearch] = useState(false);
   const [profileOpen,    setProfileOpen]    = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [miniCartOpen,   setMiniCartOpen]   = useState(false);
   const [helpOpen,       setHelpOpen]       = useState(false);
   const profileRef = useRef<HTMLDivElement>(null);
+  const headerRef  = useRef<HTMLElement>(null);
+  const mobileMenuBtnRef = useRef<HTMLButtonElement>(null);
+  const mobileNavPanelRef = useRef<HTMLDivElement>(null);
   const itemCount  = useCartStore(
     (s) => Object.values(s.items).reduce((acc, i) => acc + i.quantity, 0)
   );
@@ -39,9 +45,71 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  useEffect(() => {
+    setPortalReady(true);
+  }, []);
+
+  useLayoutEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const setVar = () => {
+      document.documentElement.style.setProperty(
+        "--mobile-drawer-top",
+        `${el.offsetHeight}px`
+      );
+    };
+    setVar();
+    const ro = new ResizeObserver(setVar);
+    ro.observe(el);
+    window.addEventListener("resize", setVar);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", setVar);
+      document.documentElement.style.removeProperty("--mobile-drawer-top");
+    };
+  }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1024px)");
+    const closeIfDesktop = () => {
+      if (!mq.matches) setMobileMenuOpen(false);
+    };
+    mq.addEventListener("change", closeIfDesktop);
+    return () => mq.removeEventListener("change", closeIfDesktop);
+  }, []);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const closeOnOutside = (e: PointerEvent) => {
+      const t = e.target as Node;
+      if (mobileNavPanelRef.current?.contains(t)) return;
+      if (mobileMenuBtnRef.current?.contains(t)) return;
+      setMobileMenuOpen(false);
+    };
+    document.addEventListener("pointerdown", closeOnOutside, true);
+    return () => document.removeEventListener("pointerdown", closeOnOutside, true);
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1024px)");
+    const apply = () => setCompactHeaderSearch(mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
+
   return (
     <div className="header-root">
-      <header className="topbar">
+      <header ref={headerRef} className="topbar">
 
         {/* ── Utility bar ── */}
         <div className="topbar-utility">
@@ -87,7 +155,7 @@ export function Header() {
 
           {/* Search */}
           <div className="topbar-search-wrap">
-            <SearchOverlay />
+            <SearchOverlay compact={compactHeaderSearch} />
           </div>
 
           {/* Right actions */}
@@ -216,9 +284,13 @@ export function Header() {
           </nav>
 
           <button
+            ref={mobileMenuBtnRef}
+            type="button"
             className="mobile-menu-btn"
             onClick={() => setMobileMenuOpen((p) => !p)}
             aria-expanded={mobileMenuOpen}
+            aria-haspopup="true"
+            aria-controls="mobile-nav-panel"
             aria-label="Toggle menu"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
@@ -250,43 +322,94 @@ export function Header() {
           ))}
         </div>
 
-        {/* ── Mobile drawer ── */}
-        <div className={`mobile-drawer${mobileMenuOpen ? " open" : ""}`}>
-          <div className="mobile-drawer-inner">
-            <div className="mobile-search-wrap"><SearchOverlay /></div>
-            <div className="mobile-section">
-              <Link href="/requisition-lists" onClick={() => setMobileMenuOpen(false)}>My Order Guide</Link>
-              <button
-                style={{ background:"none", border:"none", padding:0, color:"inherit", font:"inherit", cursor:"pointer", textAlign:"left" }}
-                onClick={() => { setMobileMenuOpen(false); setMiniCartOpen(true); }}
-              >
-                Cart ({itemCount})
-              </button>
-              <Link href="/account/dashboard"    onClick={() => setMobileMenuOpen(false)}>Account Dashboard</Link>
-              <Link href="/account/information"  onClick={() => setMobileMenuOpen(false)}>Account Information</Link>
-              <Link href="/account/address-book" onClick={() => setMobileMenuOpen(false)}>Address Book</Link>
-              <Link href="/account/orders"       onClick={() => setMobileMenuOpen(false)}>My Orders</Link>
-              <Link href="/account/wishlist"     onClick={() => setMobileMenuOpen(false)}>My Wishlist</Link>
-            </div>
-            {NAV_ITEMS.map((item) => (
-              <details key={item.slug} className="mobile-nav-group">
-                <summary>{item.label}</summary>
-                <Link href={item.href} onClick={() => setMobileMenuOpen(false)} className="mobile-view-all">
-                  View All {item.label}
-                </Link>
-                <div className="mobile-sub-links">
-                  {item.subcategories.map((sub) => (
-                    <Link key={sub.slug} href={`${item.href}?sub=${sub.slug}`} onClick={() => setMobileMenuOpen(false)}>
-                      {sub.label}
-                    </Link>
-                  ))}
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-
       </header>
+
+      {portalReady &&
+        mobileMenuOpen &&
+        compactHeaderSearch &&
+        typeof document !== "undefined" &&
+        createPortal(
+            <div
+              ref={mobileNavPanelRef}
+              className="mobile-drawer mobile-drawer--overlay open"
+              id="mobile-nav-panel"
+              role="dialog"
+              aria-modal="false"
+              aria-label="Site navigation"
+            >
+              <div className="mobile-drawer-inner">
+                <details className="mobile-nav-group mobile-nav-group--accordion">
+                  <summary>Quick actions</summary>
+                  <div className="mobile-accordion-panel">
+                    <Link href="/requisition-lists" onClick={() => setMobileMenuOpen(false)}>Order Guide</Link>
+                    <button
+                      type="button"
+                      className="mobile-drawer-btn"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMiniCartOpen(true);
+                      }}
+                    >
+                      Cart{itemCount > 0 ? ` (${itemCount > 99 ? "99+" : itemCount})` : ""}
+                    </button>
+                    <button
+                      type="button"
+                      className="mobile-drawer-btn"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setHelpOpen(true);
+                      }}
+                    >
+                      Help · Submit a request
+                    </button>
+                  </div>
+                </details>
+
+                <details className="mobile-nav-group mobile-nav-group--accordion">
+                  <summary>My account</summary>
+                  <div className="mobile-accordion-panel">
+                    <Link href="/account/dashboard"    onClick={() => setMobileMenuOpen(false)}>Account Dashboard</Link>
+                    <Link href="/account/information"  onClick={() => setMobileMenuOpen(false)}>Account Information</Link>
+                    <Link href="/account/address-book" onClick={() => setMobileMenuOpen(false)}>Address Book</Link>
+                    <Link href="/account/orders"       onClick={() => setMobileMenuOpen(false)}>My Orders</Link>
+                    <Link href="/account/wishlist"     onClick={() => setMobileMenuOpen(false)}>My Wishlist</Link>
+                    {isLoggedIn ? (
+                      <button
+                        type="button"
+                        className="mobile-drawer-btn"
+                        onClick={() => {
+                          signOut({ callbackUrl: "/login" });
+                          setMobileMenuOpen(false);
+                        }}
+                      >
+                        Sign out
+                      </button>
+                    ) : (
+                      <Link href="/login" onClick={() => setMobileMenuOpen(false)}>Sign in</Link>
+                    )}
+                  </div>
+                </details>
+
+                <p className="mobile-drawer-heading mobile-drawer-heading--spaced">Shop categories</p>
+                {NAV_ITEMS.map((item) => (
+                  <details key={item.slug} className="mobile-nav-group">
+                    <summary>{item.label}</summary>
+                    <Link href={item.href} onClick={() => setMobileMenuOpen(false)} className="mobile-view-all">
+                      View All {item.label}
+                    </Link>
+                    <div className="mobile-sub-links">
+                      {item.subcategories.map((sub) => (
+                        <Link key={sub.slug} href={`${item.href}?sub=${sub.slug}`} onClick={() => setMobileMenuOpen(false)}>
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>,
+          document.body
+        )}
 
       <MiniCart open={miniCartOpen} onClose={() => setMiniCartOpen(false)} />
       <HelpRequestPanel open={helpOpen} onClose={() => setHelpOpen(false)} />

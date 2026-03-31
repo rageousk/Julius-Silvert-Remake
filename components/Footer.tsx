@@ -76,31 +76,29 @@ export function Footer() {
         </div>
 
         {/* Contact column */}
-        <div className="footer-col">
-          <h4 className="footer-col-title">Contact Us</h4>
+        <div className="footer-col footer-col--contact">
+          <h4 className="footer-col-title">Contact</h4>
           <ul className="footer-links">
             <li>
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">Contact &amp; support</Link>
             </li>
             <li>
-              <a href="mailto:orders@juliussilvert.com">
-                orders@juliussilvert.com
-              </a>
+              <button type="button" className="footer-link-btn" onClick={() => setHelpOpen(true)}>
+                Submit a request
+              </button>
             </li>
             <li>
-              <Link href="/brand-partners">Brand Partners</Link>
+              <Link href="/brand-partners">Brand partners</Link>
             </li>
           </ul>
         </div>
 
         {/* Support column */}
-        <div className="footer-col">
+        <div className="footer-col footer-col--support">
           <h4 className="footer-col-title">Support</h4>
           <ul className="footer-links">
             <li>
-              <button className="footer-link-btn" onClick={() => setHelpOpen(true)}>
-                Submit a Request
-              </button>
+              <Link href="/contact">Help &amp; contact info</Link>
             </li>
             <li>
               <Link href="/terms">Terms of Service</Link>
@@ -117,12 +115,12 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Quick Order column */}
-        <div className="footer-col">
-          <h4 className="footer-col-title">Quick Links</h4>
+        {/* Quick links */}
+        <div className="footer-col footer-col--quick">
+          <h4 className="footer-col-title">Quick links</h4>
           <ul className="footer-links">
             <li>
-              <Link href="/requisition-lists">My Order Guide</Link>
+              <Link href="/requisition-lists">My order guide</Link>
             </li>
             <li>
               <Link href="/cart">Cart</Link>
@@ -131,10 +129,10 @@ export function Footer() {
               <Link href="/account/wishlist">Wishlist</Link>
             </li>
             <li>
-              <Link href="/catalog/meat-poultry">Meat &amp; Poultry</Link>
+              <Link href="/whats-new">What&apos;s New</Link>
             </li>
             <li>
-              <Link href="/catalog/seafood">Seafood</Link>
+              <Link href="/">Browse catalog</Link>
             </li>
           </ul>
         </div>

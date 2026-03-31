@@ -17,7 +17,12 @@ function categorySlug(cat: string) {
   return cat.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
-export function SearchOverlay() {
+type SearchOverlayProps = {
+  /** Narrow header: shorter placeholder and slightly tighter field */
+  compact?: boolean;
+};
+
+export function SearchOverlay({ compact = false }: SearchOverlayProps) {
   const router = useRouter();
 
   const [query,   setQuery]   = useState("");
@@ -66,7 +71,7 @@ export function SearchOverlay() {
   }
 
   return (
-    <div className="search-wrap" ref={wrapRef}>
+    <div className={`search-wrap${compact ? " search-wrap--compact" : ""}`} ref={wrapRef}>
       <form className="top-search" onSubmit={handleSubmit}>
         <span className="search-icon" aria-hidden>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -85,7 +90,7 @@ export function SearchOverlay() {
           onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
             if (e.key === "Escape") { setOpen(false); inputRef.current?.blur(); }
           }}
-          placeholder="What can we help you find today?"
+          placeholder={compact ? "Search products…" : "What can we help you find today?"}
           aria-label="Search products"
           autoComplete="off"
         />

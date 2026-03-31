@@ -298,11 +298,21 @@ export function RequisitionListsClient() {
         )}
 
         {lists.length === 0 ? (
-          <div className="cat-empty" style={{ marginTop: "1.5rem" }}>
+          <div className="cat-empty rl-empty-state" style={{ marginTop: "1.5rem" }}>
             <div className="cat-empty-icon">📋</div>
-            <h2>No Requisition Lists Yet</h2>
-            <p>Create your first list to organize your regular orders.</p>
-            <Link href="/" className="btn-primary">Browse Catalog</Link>
+            <h2>No requisition lists yet</h2>
+            <p>
+              Create a list to save recurring orders, then add products from the catalog or product pages using the list
+              icon on each item.
+            </p>
+            <div className="rl-empty-actions">
+              <button type="button" className="btn-primary" onClick={() => setShowCreate(true)}>
+                Create your first list
+              </button>
+              <Link href="/" className="rl-empty-secondary-link">
+                Browse catalog
+              </Link>
+            </div>
           </div>
         ) : (
           <div className="rl-table-wrap">
