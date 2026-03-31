@@ -75,6 +75,8 @@ function buildProviders() {
 }
 
 export const authOptions: NextAuthOptions = {
+  // Required on Vercel so the host/URL is trusted and sessions resolve (avoids stuck loading).
+  trustHost: true,
   providers: buildProviders(),
 
   pages: {
