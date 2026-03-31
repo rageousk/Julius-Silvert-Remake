@@ -176,8 +176,8 @@ export function WhatsNewCatalog() {
 
         </aside>
 
-        {/* ── MAIN ── */}
-        <main className="cat-main">
+        {/* ── MAIN (div: outer ClientShell already wraps route in <main>) ── */}
+        <div className="cat-main">
 
           {/* Breadcrumb */}
           <nav className="cat-breadcrumb" aria-label="breadcrumb">
@@ -254,7 +254,7 @@ export function WhatsNewCatalog() {
               ))}
             </div>
           )}
-        </main>
+        </div>
 
       </div>
     </div>

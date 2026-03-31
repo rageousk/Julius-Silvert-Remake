@@ -7012,3 +7012,142 @@ main > .container {
     width: auto;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   Mobile fixes — base .cat-page-layout / .footer-inner appear
+   earlier in the file AFTER old @media blocks, so they were
+   winning the cascade on phones. These rules load last.
+═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .cat-page-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cat-sidebar {
+    position: static;
+    top: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cat-main {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .pc-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pc-card {
+    max-width: 100%;
+  }
+
+  .cat-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .cat-sort {
+    white-space: normal;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    gap: 2rem;
+  }
+
+  .footer-brand,
+  .footer-col--contact,
+  .footer-col--support,
+  .footer-col--quick {
+    grid-area: auto;
+    max-width: 100%;
+  }
+
+  .footer-col-title {
+    margin-bottom: 0.65rem;
+  }
+
+  .footer-link-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    background: none;
+    border: none;
+    font: inherit;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    line-height: 1.45;
+  }
+
+  .footer-links a,
+  .footer-link-btn {
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: manual;
+  }
+
+  /* Room for fixed Quick Add FAB so it doesn’t cover card actions */
+  main {
+    padding-bottom: max(5rem, calc(4.5rem + env(safe-area-inset-bottom, 0px)));
+  }
+}
+
+@media (max-width: 640px) {
+  .pc-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pc-stepper {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    grid-column: unset;
+  }
+
+  .pc-stepper .stepper-input {
+    flex: 1 1 auto;
+    min-width: 44px;
+    width: auto;
+    max-width: none;
+    text-align: center;
+  }
+
+  .pc-add-btn {
+    flex: 1 1 auto;
+    min-width: 0;
+    grid-column: unset;
+  }
+
+  .pc-icon-wrap {
+    flex: 0 0 auto;
+    grid-column: unset;
+  }
+
+  .pc-actions > .pc-icon-btn.pc-heart {
+    flex: 0 0 auto;
+    grid-column: unset;
+  }
+}

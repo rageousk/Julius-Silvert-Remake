@@ -180,8 +180,8 @@ export default function CategoryPageClient({
 
       </aside>
 
-      {/* ── MAIN ── */}
-      <main className="cat-main">
+      {/* ── MAIN (div: outer shell already uses <main>) ── */}
+      <div className="cat-main">
 
         {/* Breadcrumb */}
         <nav className="cat-breadcrumb" aria-label="breadcrumb">
@@ -260,7 +260,7 @@ export default function CategoryPageClient({
             ))}
           </div>
         )}
-      </main>
+      </div>
     </div>
   );
 }
