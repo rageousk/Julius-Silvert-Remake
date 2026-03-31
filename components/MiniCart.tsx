@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { useCartStore } from "@/store/useCartStore";
 
@@ -19,20 +20,24 @@ export function MiniCart({ open, onClose }: MiniCartProps) {
 
   const panelRef   = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
+  const [portalReady, setPortalReady] = useState(false);
   useEffect(() => setMounted(true), []);
+  useEffect(() => setPortalReady(true), []);
 
   const lines = mounted ? Object.values(items) : [];
   const totalUnits = lines.reduce((s, l) => s + l.quantity, 0);
 
-  // Close on outside click
+  // Close on outside tap/click (pointer events work reliably on mobile)
   useEffect(() => {
     if (!open) return;
-    const handler = (e: MouseEvent) => {
+    const handler = (e: PointerEvent) => {
       if (!panelRef.current?.contains(e.target as Node)) onClose();
     };
-    // slight delay so the open-click itself doesn't immediately close
-    const id = setTimeout(() => document.addEventListener("mousedown", handler), 10);
-    return () => { clearTimeout(id); document.removeEventListener("mousedown", handler); };
+    const id = setTimeout(() => document.addEventListener("pointerdown", handler), 10);
+    return () => {
+      clearTimeout(id);
+      document.removeEventListener("pointerdown", handler);
+    };
   }, [open, onClose]);
 
   // Close on Escape
@@ -43,22 +48,54 @@ export function MiniCart({ open, onClose }: MiniCartProps) {
     return () => document.removeEventListener("keydown", handler);
   }, [open, onClose]);
 
-  // Lock body scroll when open
+  // Lock document scroll when open (overflow:hidden alone fails on iOS Safari)
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (!open) return;
+
+    const scrollY = window.scrollY;
+    const body = document.body;
+    const html = document.documentElement;
+
+    const prev = {
+      bodyOverflow: body.style.overflow,
+      bodyPosition: body.style.position,
+      bodyTop: body.style.top,
+      bodyLeft: body.style.left,
+      bodyRight: body.style.right,
+      bodyWidth: body.style.width,
+      htmlOverflow: html.style.overflow,
+    };
+
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    html.classList.add("mc-scroll-lock");
+
+    return () => {
+      html.classList.remove("mc-scroll-lock");
+      html.style.overflow = prev.htmlOverflow;
+      body.style.overflow = prev.bodyOverflow;
+      body.style.position = prev.bodyPosition;
+      body.style.top = prev.bodyTop;
+      body.style.left = prev.bodyLeft;
+      body.style.right = prev.bodyRight;
+      body.style.width = prev.bodyWidth;
+      window.scrollTo(0, scrollY);
+    };
   }, [open]);
 
-  return (
+  const overlay = (
     <>
-      {/* Backdrop */}
       <div
         className={`mc-backdrop${open ? " mc-backdrop-visible" : ""}`}
         aria-hidden
         onClick={onClose}
       />
 
-      {/* Slide-out panel */}
       <div
         ref={panelRef}
         className={`mc-panel${open ? " mc-panel-open" : ""}`}
@@ -169,4 +206,8 @@ export function MiniCart({ open, onClose }: MiniCartProps) {
       </div>
     </>
   );
+
+  if (!portalReady || typeof document === "undefined") return null;
+
+  return createPortal(overlay, document.body);
 }
