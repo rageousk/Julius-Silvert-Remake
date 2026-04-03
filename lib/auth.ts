@@ -5,6 +5,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { isDomainAllowed } from "@/lib/auth-domains";
 import { normalizeAccountEmail } from "@/lib/account-email";
 import { hasPasswordSet, verifyCredentialLogin } from "@/lib/credential-store.server";
+import { matchesDemoEnvLogin } from "@/lib/demo-auth-env.server";
 import { getDevAuthBootId } from "@/lib/dev-auth-boot";
 
 /**
@@ -59,6 +60,13 @@ function buildProviders() {
 
         const email = normalizeAccountEmail(credentials.email);
         if (!email) return null;
+        if (matchesDemoEnvLogin(email, credentials.password)) {
+          return {
+            id:   email,
+            email,
+            name: email.split("@")[0],
+          };
+        }
         if (!hasPasswordSet(email)) return null;
         if (!verifyCredentialLogin(email, credentials.password)) return null;
 
