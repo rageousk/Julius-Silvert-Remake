@@ -3,7 +3,7 @@ import GoogleProvider      from "next-auth/providers/google";
 import AzureADProvider     from "next-auth/providers/azure-ad";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { isDomainAllowed } from "@/lib/auth-domains";
-import { normalizeAccountEmail } from "@/lib/account-email";
+import { normalizeAccountEmail, resolveOAuthSignInEmail } from "@/lib/account-email";
 import { hasPasswordSet, verifyCredentialLogin } from "@/lib/credential-store.server";
 import { matchesDemoEnvLogin } from "@/lib/demo-auth-env.server";
 import { getDevAuthBootId } from "@/lib/dev-auth-boot";
@@ -104,11 +104,14 @@ export const authOptions: NextAuthOptions & { trustHost?: boolean } = {
      * Return true  → allow sign-in.
      * Return false → block sign-in (redirects to /login?error=AccessDenied).
      */
-    async signIn({ user, account }) {
-      const email = normalizeAccountEmail(user?.email);
-
+    async signIn({ user, account, profile }) {
       // Credentials provider: domain check is handled inside authorize()
       if (account?.provider === "credentials") return true;
+
+      const email = resolveOAuthSignInEmail(
+        user as { email?: string | null; preferred_username?: string | null; upn?: string | null },
+        profile as Record<string, unknown> | undefined
+      );
 
       // For Google / Microsoft SSO — enforce allowed domains
       if (!isDomainAllowed(email)) {
@@ -132,10 +135,16 @@ export const authOptions: NextAuthOptions & { trustHost?: boolean } = {
 
       // Initial sign-in — canonical email so Google vs Microsoft vs credentials match one user
       if (user) {
-        const u = user as { email?: string | null; preferred_username?: string | null };
-        const raw = u.email || u.preferred_username || "";
-        token.email = normalizeAccountEmail(raw) || "";
-        token.name  = user.name;
+        token.email =
+          resolveOAuthSignInEmail(
+            user as {
+              email?: string | null;
+              preferred_username?: string | null;
+              upn?: string | null;
+            },
+            undefined
+          ) || "";
+        token.name = user.name;
       }
       if (account) { token.provider = account.provider; }
 

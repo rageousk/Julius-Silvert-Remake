@@ -34,7 +34,19 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const token = createResetToken(email, browserKey);
+  let token: string;
+  try {
+    token = createResetToken(email, browserKey);
+  } catch (err) {
+    console.error("[forgot-password] createResetToken failed:", err);
+    return NextResponse.json(
+      {
+        error:
+          "Password reset storage is unavailable on this deployment. Use Google or Microsoft sign-in, or contact support.",
+      },
+      { status: 503 }
+    );
+  }
   const origin = req.headers.get("origin") ?? req.nextUrl.origin;
   const magicLink = `${origin}/reset-password?token=${token}`;
 

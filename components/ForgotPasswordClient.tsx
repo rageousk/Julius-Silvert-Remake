@@ -24,6 +24,15 @@ export function ForgotPasswordClient() {
     }
     setLoading(true);
     try {
+      const boot = await fetch("/api/auth/reset-browser", {
+        method: "POST",
+        credentials: "include",
+      });
+      if (!boot.ok) {
+        setErr("Could not start reset session. Refresh the page and try again.");
+        setLoading(false);
+        return;
+      }
       const res = await fetch("/api/auth/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
