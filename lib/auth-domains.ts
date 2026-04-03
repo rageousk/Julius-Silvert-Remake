@@ -1,5 +1,9 @@
 /** Domains allowed for SSO and email/password sign-in */
-export const ALLOWED_EMAIL_DOMAINS = ["rowan.edu", "students.rowan.edu"];
+export const ALLOWED_EMAIL_DOMAINS = [
+  "rowan.edu",
+  "students.rowan.edu",
+  "juliussilvert.com",
+];
 
 export function isDomainAllowed(email: string | null | undefined): boolean {
   if (!email) return false;
